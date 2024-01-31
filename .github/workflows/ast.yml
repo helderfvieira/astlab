@@ -1,4 +1,4 @@
-name: Checkmarx AST Scan
+name: astlab_workflow
 on:
   push:
     branches:
@@ -13,8 +13,8 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main #Github Action version
         with:
-          project_name: astlab-hv
-          cx_tenant: galactica
+          project_name: astlab_hv
+          cx_tenant: Galactica
           base_uri: https://deu.ast.checkmarx.net
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.SECRET }}
